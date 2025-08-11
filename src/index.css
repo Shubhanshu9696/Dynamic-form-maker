@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Form Builder Design System - Professional & Modern */
+
+@layer base {
+  :root {
+    /* Core Background & Surface */
+    --background: 210 20% 98%;
+    --foreground: 222 84% 10%;
+    --surface: 0 0% 100%;
+    --surface-elevated: 210 40% 98%;
+
+    /* Brand Colors - Professional Blue Palette */
+    --primary: 220 91% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 91% 45%;
+    --primary-light: 220 91% 95%;
+
+    /* Secondary - Elegant Purple Accent */
+    --secondary: 280 50% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 280 50% 55%;
+    --secondary-light: 280 50% 95%;
+
+    /* Success & Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+    
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    --error-light: 0 84% 95%;
+
+    /* Neutral Palette */
+    --muted: 215 16% 95%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 220 91% 50%;
+
+    /* Text Hierarchy */
+    --text-primary: 222 84% 10%;
+    --text-secondary: 215 16% 47%;
+    --text-tertiary: 215 16% 65%;
+
+    /* Form Builder Specific */
+    --form-bg: 210 20% 98%;
+    --field-bg: 0 0% 100%;
+    --field-border: 214 32% 91%;
+    --field-focus: 220 91% 50%;
+    --preview-bg: 0 0% 100%;
+    --builder-sidebar: 220 13% 98%;
+
+    /* Shadows & Effects */
+    --shadow-sm: 0 1px 2px 0 hsl(220 43% 11% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(220 43% 11% / 0.1), 0 1px 2px -1px hsl(220 43% 11% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(220 43% 11% / 0.1), 0 2px 4px -2px hsl(220 43% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(220 43% 11% / 0.1), 0 4px 6px -4px hsl(220 43% 11% / 0.1);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 91% 50%) 0%, hsl(280 50% 60%) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 91% 50%) 0%, hsl(220 91% 45%) 100%);
+
+    /* Animation & Transitions */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode adapts the light theme with proper contrast */
+    --background: 222 84% 6%;
+    --foreground: 210 40% 98%;
+    --surface: 222 84% 8%;
+    --surface-elevated: 222 84% 10%;
+
+    --primary: 220 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 91% 60%;
+    --primary-light: 220 91% 15%;
+
+    --secondary: 280 50% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 280 50% 70%;
+    --secondary-light: 280 50% 15%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 15%;
+    
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 15%;
+    
+    --error: 0 84% 65%;
+    --error-foreground: 0 0% 100%;
+    --error-light: 0 84% 15%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 220 91% 55%;
+
+    --text-primary: 210 40% 98%;
+    --text-secondary: 215 20% 65%;
+    --text-tertiary: 215 20% 50%;
+
+    --form-bg: 222 84% 6%;
+    --field-bg: 222 84% 8%;
+    --field-border: 217 33% 17%;
+    --field-focus: 220 91% 55%;
+    --preview-bg: 222 84% 8%;
+    --builder-sidebar: 222 84% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Form Builder Specific Styles */
+  .form-builder-container {
+    @apply bg-form-bg min-h-screen;
+  }
+
+  .field-container {
+    @apply bg-field-bg border border-field-border rounded-lg p-4 hover:border-field-focus transition-all duration-200;
+  }
+
+  .field-container:focus-within {
+    @apply border-field-focus ring-2 ring-field-focus ring-opacity-20;
+  }
+
+  .preview-container {
+    @apply bg-preview-bg rounded-lg shadow-lg p-6;
+  }
+
+  .builder-sidebar {
+    @apply bg-builder-sidebar border-r border-border;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted rounded-lg;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-lg;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-secondary;
+  }
+
+  /* Animation Classes */
+  .animate-slide-in {
+    animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
